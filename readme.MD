@@ -1,13 +1,13 @@
 # What is Webpack?
 
-Webpack is a **modern module bundler**. It is primarily used to bundle JavaScript files however it can perform operations on CSS, HTML, images and JS. Webpack handles most front-end assists.
+Webpack is a **modern module bundler**. It is primarily used to bundle JavaScript files however it can perform operations on CSS, HTML and images. Webpack handles most front-end assists.
 
 Webpack is used in all frameworks. Generally, when you create your application the webpack configuration file will be included in the project for you.
 
-You will get a zero-configuration file, this means that there is nothing extra which you need to do.
+You will get a **zero-configuration file**, no extra work will be needed from you.
 
 ## Setting up folder structures
-The zero-configuration webpack file looks for certain starting points or folders inside your application. Webpack will look for a folder called src and a file inside it called index.js. 
+The zero-configuration webpack looks for certain starting points or folders inside your application. Webpack will look for a folder called **src** and a file inside the src folder called **index.js.** 
 
 ```
 myFirstAutomatedProject
@@ -24,10 +24,10 @@ Create a folder on your desktop called **myFirstAutomatedProject** inside the fo
 
 ## Creating and updating the package.json file
 
-Run the **“npm init -Y”** command while you are cd’ed into the **myFirstAutomatedProject.** This allows you to create a **package.json** file without answering any of the questions. It also **initializes** the project.
+Run the **“npm init -Y”** command while you are cd’ed into the **myFirstAutomatedProject.** This allows you to create a **package.json** file without answering any of the questions. The project is **initialized** as well.
 
 ### Setting up scripts
-In your package.json you can set up scripts to execute certain commands. In our case we would like to run webpack. We are going to manually configure webpack to run inside our package.json file.
+In your package.json you can set up **scripts** to execute certain commands. In our case we would like to run webpack. We are going to manually configure webpack to run inside our package.json file.
 
 ```json
 {
@@ -46,7 +46,7 @@ In your package.json you can set up scripts to execute certain commands. In our 
   }
 }
 ```
-We have created a scripts key and its value is an object. Inside this object you can define commands you want to run in your terminal. We have a build command and we would like to launch the Webpack CLI.
+We have created a **scripts key** and its value is an **object**. Inside this object you can define commands you want to run in your terminal. We have created a build command and we would like to launch the **Webpack CLI**. The CLI provides a **C**ommand **L**ine **I**nterface which allows you to interact with your build.
 
 ### Installing packages
 
@@ -54,7 +54,7 @@ Before we use webpack, we need to install it first. We can run the following com
 
 **npm i -D webpack webpack-cli**
 
-The -D command saves webpack and webpack-cli to our project as a dev dependency. 
+The **-D command** saves **webpack** and **webpack-cli** to our project as **a dev dependency**. 
 
 ### Testing 
 Create a **greeting.js** file inside the **src folder.**
@@ -76,7 +76,7 @@ import { greeting } from './greeting.js';
 greeting('Feu2');
 ```
 
-Import the module into your index.js file, then call the function. 
+Import the **module** into your index.js file, then call the function. 
 
 **The index.html file**
 ```html
@@ -93,12 +93,14 @@ Import the module into your index.js file, then call the function.
 </body>
 </html>
 ```
-Import the index.js file inside your src folder in your HTML and look at your console. 
+Import the **index.js** file inside your src folder in your HTML and look at your console. 
 
 ![error](error.png)
 
-Your browser does not understand what an import statement. It will throw an error.
+Your **browser** does not understand what an **import statement** is. It will throw an error.
+
 While you are cd’ed in your folder run the command: **“npm run build”** which we defined inside our package.json file.
+
 A **dist folder** should have been created for you. Link the **main.js** file in your html.
 
 ```html
@@ -120,4 +122,4 @@ If you run the html in your browser, you see **“Hi Feu2”** in your console.
 
 
 
-Webpack took JavaScript which a browser could not understand and converted it into browser friendly code. You can peek inside the main.js file, it is minified, but if you look closely enough towards the end you will be able to see your code.
+**Webpack** took JavaScript which a browser could not interpret and converted it into **browser friendly code**. You can peek inside the **main.js** file, it is minified, but if you look closely enough towards the end you will be able to see your code.
